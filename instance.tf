@@ -23,7 +23,7 @@ resource "aws_instance" "example" {
     private_key = "${file("${var.PATH_TO_PRIVATE_KEY}")}"
   }
 }
-
+#we can use this public ip for any confmgt tool like Ansible or puppet for input to install any 3rd party software.
 output "ip" {
     value = "${aws_instance.example.public_ip}"
 }
